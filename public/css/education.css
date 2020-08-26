@@ -1,0 +1,85 @@
+.school_grid_container {
+    position: relative;
+    display: grid;
+    grid-row-gap: 8vh;
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: repeat(3, 23.6vh);
+    grid-template-areas:
+        "EducationTitle EducationTitle"
+        "BCIT_icon hidden_bcit_diploma"
+        "Centennial_icon hidden_centennial_diploma";
+}
+.grid-item-1 {
+    grid-area: EducationTitle;
+    background-color: black;
+    color: white;
+    text-align: center;
+    line-height: 20vh;
+}
+.grid-item-2 {
+    position: relative;
+    grid-area: BCIT_icon;
+    width: 100%;
+    height: auto;
+}
+
+.school_img {
+    opacity: 1;
+    display: block;
+    transition: 0.5s ease;
+    cursor: pointer;
+    width: 50%;
+}
+.grid-item-3 {
+    grid-area: hidden_bcit_diploma;
+    position: relative;
+    background-image: url(../image/diploma.jpg);
+    background-size: cover;
+    font-size: x-large;
+    text-align: center;
+}
+.grid-item-4 {
+    grid-area: Centennial_icon;
+    width: 90%;
+    height: auto;
+}
+.grid-item-5 {
+    position: relative;
+    grid-area: hidden_centennial_diploma;
+    background-image: url(../image/diploma.jpg);
+    background-size: cover;
+    text-align: center;
+    font-size: x-large;
+}
+
+#hidden_bcit_icon_notice,
+#hidden_centennial_icon_notice {
+    transition: 0.3s ease-in;
+    position: absolute;
+    opacity: 0;
+    width: 15vw;
+    height: auto;
+    background-color: black;
+    color: white;
+    text-align: center;
+    border-radius: 6px;
+    font-size: medium;
+}
+
+.grid-item-2:hover .image,
+.grid-item-4:hover .image {
+    opacity: 0.3;
+}
+
+.grid-item-2:hover #hidden_bcit_icon_notice,
+.grid-item-4:hover #hidden_centennial_icon_notice {
+    opacity: 1;
+}
+
+#bcitTranscript,
+#centennialTranscript {
+    position: absolute;
+    bottom: 30%;
+    font-size: large;
+    font-weight: bold;
+}

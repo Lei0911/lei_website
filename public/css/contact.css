@@ -1,0 +1,50 @@
+.contactTitle {
+    position: relative;
+    text-align: center;
+    background-color: black;
+    color: white;
+    font-weight: bold;
+    height: 23.6vh;
+    line-height: 20vh;
+}
+.contactContent {
+    position: absolute;
+    width: 40vw;
+    height: 40vh;
+    /* border: 1px red solid; */
+    left: 50%;
+    top: 70%;
+    transform: translate(-50%, -70%);
+    text-align: center;
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    grid-template-rows: repeat(3, 10vh);
+    grid-row-gap: 2em;
+    grid-template-areas: "emailIcon email" "linkedInIcon linkedIn" "weChatIcon weChat";
+    line-height: 10vh;
+}
+#email {
+    grid-area: email;
+}
+#emailIcon {
+    grid-area: emailIcon;
+}
+.grid-item {
+    border: 2px black solid;
+    height: 100%;
+    width: 100%;
+    font-size: larger;
+    font-weight: bolder;
+}
+#linkedInIcon {
+    grid-area: linkedInIcon;
+}
+#linkedIn {
+    grid-area: linkedIn;
+}
+#weChatIcon {
+    grid-area: weChatIcon;
+}
+#weChat {
+    grid-area: weChat;
+}

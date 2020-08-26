@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/eduDetail.css">
+    <title>Education Details</title>
+</head>
+
+<body>
+    <nav class="titleTag">
+        <div class="barMenu">
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+        </div>
+        <ul class="nav-links">
+            <li><a href="/profile">My Profile</a></li>
+            <li><a href="/education">Education</a></li>
+            <li><a href="/project">Project</a></li>
+            <li><a href="/contact">Contact</a></li>
+            <li><a href="/auth/logout">Logout</a></li>
+        </ul>
+    </nav>
+    <div id="eduDetailBody">
+
+        {{!-- <svg width="250" height="250">
+            <circle r="120" cx="125" cy="125" fill="none" stroke="red" stroke-width="10" />
+        </svg> --}}
+
+
+        <div class="box1">
+            <button class="btn" id="box1_btn">
+                <h1>Programming Language</h1>
+            </button>
+            <div class="hidden_box" id="hidden_box1">
+                <div class="techContent">Python 3</div>
+                <div class="techContent">NodeJs</div>
+                <div class="techContent">Javascript</div>
+                <div class="techContent">Database SQL</div>
+                <div class="techContent">React-Native Mobile App Development</div>
+                <div class="techContent">C# .NET & C# .ASP (FullStack WebDevelopment)</div>
+
+            </div>
+        </div>
+        <div class="box2">
+            <button class="btn" id="box2_btn">
+                <h1>Database Administration</h1>
+            </button>
+            <div class="hidden_box" id="hidden_box2">
+                <div class="techContent">InnoDB Cluster</div>
+                <div class="techContent">Replication Monitor</div>
+                <div class="techContent"> BinLog Replication</div>
+                <div class="techContent">Database Maintenance</div>
+                <div class="techContent">DB Backup & Recovery</div>
+                <div class="techContent">NoSql Mongodb & Sqlite</div>
+                <div class="techContent">Automate Replication Failover</div>
+                <div class="techContent">MicroSoft SQL Sever Management</div>
+                <div class="techContent"> GTID Replication & Master/Slave Topology</div>
+                <div class="techContent"> Replication Tools PT_Table_Checksum & PT_Table_Sync</div>
+            </div>
+        </div>
+        <div class="box3">
+            <button class="btn" id="box3_btn">
+                <h1>Networking</h1>
+            </button>
+            <div class="hidden_box" id="hidden_box3">
+                <div class="techContent">Subnetting</div>
+                <div class="techContent">DNS Configuration</div>
+                <div class="techContent">Network Configuration</div>
+                <div class="techContent">Iptables Configuration</div>
+                <div class="techContent">Iptables Configuration</div>
+                <div class="techContent">Dynamic Configuring Routing & DHCP</div>
+                <div class="techContent">Static Configuring Routing & Bridging</div>
+                <div class="techContent">WireShark Monitoring & Analyzing traffic protocols</div>
+            </div>
+        </div>
+        <div class="box4">
+            <button class="btn" id="box4_btn">
+                <h1>AWS Cloud</h1>
+            </button>
+            <div class="hidden_box" id="hidden_box4">
+                <div class="techContent">WordPress</div>
+                <div class="techContent">VPC Peering</div>
+                <div class="techContent">Route 53 & Elastic IP</div>
+                <div class="techContent">Auto Scaling Based off of SQS Message Queue Size</div>
+                <div class="techContent">IPv4 VPC, Subnets and Application Load Balancer </div>
+                <div class="techContent">Volumes, Snapshots, Upgrading, Patching and Resizing</div>
+                <div class="techContent">Configuring SNS Push Notifications on S3 Bucket Events</div>
+                <div class="techContent">Virtual Private Cloud (VPC), Subnets, NAT Instance & NAT Gateway</div>
+            </div>
+        </div>
+        <div class="box5">
+            <button class="btn" id="box5_btn">
+                <h1>Data Analytics</h1>
+            </button>
+            <div class="hidden_box" id="hidden_box5">
+                <div class="techContent">R Script</div>
+                <div class="techContent">Data Mining</div>
+                <div class="techContent">kNN Algorithm</div>
+                <div class="techContent">Decision Trees</div>
+                <div class="techContent">Association Rules</div>
+                <div class="techContent">Logistic Regression</div>
+                <div class="techContent">Excel Statistical Functions</div>
+                <div class="techContent">Artificial Neural Network(ANN)</div>
+                <div class="techContent">Clustering vs Association Rules</div>
+                <div class="techContent">Confidence Interval Estimation & T-Score Test & Z-Score Test</div>
+            </div>
+        </div>
+        <div class="box6">
+            <button class="btn" id="box6_btn">
+                <h1>Applied IT Security</h1>
+            </button>
+            <div class="hidden_box" id="hidden_box6">
+                <div class="techContent">Buffer Overflow</div>
+                <div class="techContent">Threat Modelling</div>
+                <div class="techContent">SQL Injection Test Lab</div>
+                <div class="techContent">Cryptography (Hashing-Symmetric)</div>
+                <div class="techContent">Public Key Cryptography Test Lab</div>
+                <div class="techContent">Man-in-middle attack & DDoS attack</div>
+                <div class="techContent">Man-in-browser attack</div>
+                <div class="techContent">Cross Site Scripting
+                    (XSS)</div>
+            </div>
+        </div>
+    </div>
+    <script src="../javascript/eduDetail.js"></script>
+    <script src="../javascript/allPageShared.js"></script>
+
+</body>
+
+</html>

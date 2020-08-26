@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/guestRegister.css">
+    <title>Register Guest</title>
+</head>
+
+<body>
+    <div class="guest_body">
+        <div class="instruction_info">
+            <h1>Please Create Guest User </h1>
+        </div>
+        <form action="/registerGuest" method="POST" class="guest_form">
+            <h3 class="label_info">Name</h3>
+            <input class="guest_form_input" type="text" class="userName" placeholder="Enter UserName" name="username"
+                required>
+            <h3 class="label_info">Password</h3>
+            <input class="guest_form_input" type="text" class="password" placeholder="Enter Password" name="password"
+                required>
+            <br>
+            <br>
+            <button class="guest_form_submit_btn" class="submit" type="submit">Create Guest</button>
+        </form>
+        <div id="registerGuestNav">
+            <a href="/">
+                <h3>Back To Entrance Page</h3>
+            </a>
+            <a href="/guestLogin">
+                <h3>Go To SignIn Page</h3>
+            </a>
+        </div>
+
+    </div>
+
+
+
+
+</body>
+
+</html>
