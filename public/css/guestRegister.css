@@ -5,6 +5,10 @@
     margin-left: auto;
     margin-right: auto;
     top: 15vh;
+    border: 2px solid green;
+    border-radius: 10px;
+    padding: 1em;
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
 }
 
 .instruction_info {
@@ -37,4 +41,8 @@
     width: 100%;
     display: inline-flex;
     justify-content: space-between;
+}
+button:hover {
+    cursor: pointer;
+    color: red;
 }
