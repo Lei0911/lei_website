@@ -11,7 +11,6 @@
 
 .box0 {
     position: relative;
-    /* display: grid; */
     background-color: black;
     color: white;
     grid-area: box0;
@@ -20,9 +19,6 @@
 }
 #box1 {
     position: relative;
-    /* display: grid; */
-    /* grid-auto-rows: auto; */
-    /* border: 1px red solid; */
     color: black;
     grid-area: box1;
     text-align: left;
@@ -30,12 +26,10 @@
 
 #box2 {
     position: relative;
-    /* display: grid; */
     grid-area: box2;
     text-align: left;
 }
 #box3 {
-    /* display: grid; */
     position: relative;
     grid-area: box3;
     text-align: left;
@@ -74,6 +68,5 @@
     -webkit-text-fill-color: blue;
 }
 .pTitle {
-    /* color: red; */
     font-weight: bold;
 }
