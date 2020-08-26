@@ -3,7 +3,7 @@
     display: grid;
     grid-row-gap: 8vh;
     grid-template-columns: 1fr 2fr;
-    grid-template-rows: repeat(3, 23.6vh);
+    grid-template-rows: repeat(3, 21.6vh);
     grid-template-areas:
         "EducationTitle EducationTitle"
         "BCIT_icon hidden_bcit_diploma"
