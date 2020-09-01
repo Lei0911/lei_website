@@ -53,8 +53,8 @@ router.get("/eduDetail", ensureAuth, (req, res) => {
     res.render("eduDetail");
 });
 // get centennial edu detail
-router.get("/eduDetialCentennial", ensureAuth, (req, res) => {
-    res.render("eduDetialCentennial");
+router.get("/eduDetailCentennial", ensureAuth, (req, res) => {
+    res.render("eduDetailCentennial");
 });
 
 module.exports = router;
