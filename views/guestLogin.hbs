@@ -10,6 +10,9 @@
 
 <body>
     <div class="guest_body">
+        <div id="errorMessage">
+            <h3>{{errorMessage}}</h3>
+        </div>
         <div class="instruction_info">
             <h1>Guest Login Page </h1>
         </div>
@@ -37,16 +40,20 @@
 
         <div class="guest_login_existing_guest_list">
             <h4>Total Number of Guests Created: {{totalNumGuests}}</h4>
-            <ul class="guest_user_list">
+            {{!-- <h4>Guest Name: {{guestName}}</h4> --}}
+
+
+
+            {{!-- <ul class="guest_user_list">
                 {{#each user_list}}
                 <a href="/guestLogin">
                     <li class="guest_user_item">
-                        Guest ID:{{this.id}} |
-                        Guest Name: {{this.username}}
+                        Guest ID:{{this._id}} |
+                        Guest Name: {{this}}
                     </li>
                 </a>
                 {{/each}}
-            </ul>
+            </ul> --}}
         </div>
 
     </div>

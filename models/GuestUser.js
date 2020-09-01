@@ -1,7 +1,7 @@
 const mongoose = require("mongoose");
 
 const GuestUserSchema = new mongoose.Schema({
-    userName: {
+    guestUserName: {
         type: String,
         required: true,
     },

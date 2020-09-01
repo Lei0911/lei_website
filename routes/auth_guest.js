@@ -2,24 +2,19 @@ const express = require("express");
 const passport = require("passport");
 const router = express.Router();
 const bcrypt = require("bcrypt");
-require("../config/passport_guest")(passport);
 
-// use passport local strategy to login for guest user
-const initializePassport = require("../config/passport_guest");
-initializePassport(
-    passport,
-    (username) => users.find((user) => user.username === username),
-    (id) => users.find((user) => user.id === id)
-);
+require("../config/passport_guest")(passport);
+const GuestUser = require("../models/GuestUser");
+
 const users = [];
 
 const { ensureAuth, ensureGuest } = require("../middleware/auth"); // add middleware to protect route
 
 // @route GET / GuestLogin
 router.get("/guestLogin", ensureGuest, (req, res) => {
-    // console.log(users);
     res.render("guestLogin", {
-        user_list: users.reverse(),
+        errorMessage: req.flash("error"),
+        // user_list: users.reverse(),
         totalNumGuests: users.length,
     });
 });
@@ -31,6 +26,7 @@ router.post(
         successRedirect: "/dashboard",
         failureRedirect: "/guestLogin",
         failureFlash: true,
+        // failureFlash: "Invalid username or password.",
     })
 );
 
@@ -39,18 +35,29 @@ router.get("/registerGuest", ensureGuest, (req, res) => {
 });
 
 router.post("/registerGuest", ensureGuest, async (req, res) => {
+    const hashedPassword = await bcrypt.hash(req.body.password, 10);
+    const guestUser = new GuestUser({
+        guestUserName: req.body.username,
+        password: hashedPassword,
+    });
+
     try {
-        const hashedPassword = await bcrypt.hash(req.body.password, 10);
-        users.push({
-            id: Date.now().toString(),
-            username: req.body.username,
-            password: hashedPassword,
+        await guestUser.save((err, savedGuestUser) => {
+            if (err) {
+                console.log(err);
+                res.redirect("/registerGuest");
+
+                // return res.status(500).send();
+            } else {
+                res.redirect("/guestLogin");
+                // console.log(savedGuestUser);
+                users.push(JSON.stringify(savedGuestUser));
+                // return res.status(200).send();
+            }
         });
-        res.redirect("/guestLogin");
     } catch {
         res.redirect("/registerGuest");
     }
-    // console.log(users);
 });
 
 module.exports = router;

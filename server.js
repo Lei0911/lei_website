@@ -8,7 +8,10 @@ const session = require("express-session");
 const connectDB = require("./config/db");
 const bcrypt = require("bcrypt");
 const flash = require("express-flash");
+const bodyParser = require("body-parser");
 // const methodOverride = require("method-override");
+const guestRoute = require("./routes/auth_guest");
+
 // Load config
 dotenv.config({ path: "./config/config.env" });
 
@@ -16,6 +19,7 @@ dotenv.config({ path: "./config/config.env" });
 connectDB();
 
 const app = express();
+app.use(bodyParser.json());
 
 // use morgan middleware to monitor request in console
 if (process.env.NODE_ENV === "development") {
@@ -28,6 +32,7 @@ app.set("view engine", ".hbs");
 
 //
 app.use(express.urlencoded({ extended: false }));
+// clear cache data after restart server
 app.use(flash());
 // Sessions
 app.use(
@@ -40,17 +45,15 @@ app.use(
 // Static folder
 app.use(express.static(path.join(__dirname, "public")));
 
-// Routes For Guest User Quick access Routes Passport middleware
-app.use(passport.initialize());
-app.use(passport.session());
-app.use("/", require("./routes/auth_guest"));
-
 // Routes For Google authentication User Passport middleware Passport config
 require("./config/passport_google")(passport);
 app.use(passport.initialize());
 app.use(passport.session());
 
-// app.use("/", require("./routes/auth_guest"));
+// guest user route
+app.use("/", guestRoute);
+
+// all root route
 app.use("/", require("./routes/index"));
 app.use("/auth", require("./routes/auth"));
 
