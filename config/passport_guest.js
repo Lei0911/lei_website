@@ -33,7 +33,13 @@ module.exports = (passport) => {
             });
         })
     );
-    passport.serializeUser((user, done) => done(null, user.id));
+    passport.serializeUser((user, done) => {
+        try {
+            return done(null, user.id);
+        } catch (error) {
+            console.log(error);
+        }
+    });
     passport.deserializeUser((id, done) => {
         return done(null, id);
     });
