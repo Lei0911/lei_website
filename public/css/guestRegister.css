@@ -58,3 +58,13 @@ button:hover {
     border-top-right-radius: 7px;
     border-top-left-radius: 7px;
 }
+.guest_register_existing_guest_list {
+    position: absolute;
+    padding-top: 2em;
+    left: 0;
+    top: 40vh;
+    width: 100%;
+    overflow: auto;
+    text-align: center;
+    padding: 1em;
+}

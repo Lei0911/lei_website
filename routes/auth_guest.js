@@ -6,16 +6,14 @@ const bcrypt = require("bcrypt");
 require("../config/passport_guest")(passport);
 const GuestUser = require("../models/GuestUser");
 
-const users = [];
-
 const { ensureAuth, ensureGuest } = require("../middleware/auth"); // add middleware to protect route
 
 // @route GET / GuestLogin
-router.get("/guestLogin", ensureGuest, (req, res) => {
+router.get("/guestLogin", ensureGuest, async (req, res) => {
+    const totalGuest = await GuestUser.countDocuments({});
     res.render("guestLogin", {
         errorMessage: req.flash("error"),
-        // user_list: users.reverse(),
-        totalNumGuests: users.length,
+        totalNumGuests: totalGuest,
     });
 });
 
@@ -30,8 +28,12 @@ router.post(
     })
 );
 
-router.get("/registerGuest", ensureGuest, (req, res) => {
-    res.render("registerGuest");
+router.get("/registerGuest", ensureGuest, async (req, res) => {
+    const totalGuest = await GuestUser.countDocuments({});
+    res.render("registerGuest", {
+        errorMessage: req.flash("error"),
+        totalNumGuests: totalGuest,
+    });
 });
 
 router.post("/registerGuest", ensureGuest, async (req, res) => {
@@ -46,12 +48,9 @@ router.post("/registerGuest", ensureGuest, async (req, res) => {
             if (err) {
                 console.log(err);
                 res.redirect("/registerGuest");
-
                 // return res.status(500).send();
             } else {
                 res.redirect("/guestLogin");
-                // console.log(savedGuestUser);
-                users.push(JSON.stringify(savedGuestUser));
                 // return res.status(200).send();
             }
         });

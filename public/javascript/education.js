@@ -19,4 +19,4 @@ centennialTranscript.addEventListener("click", () => {
     window.location.href = "centennialTranscript";
 });
 
-onclick = "location.href ='eduDetail'";
+// onclick = "location.href ='eduDetail'";
