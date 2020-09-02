@@ -14,14 +14,16 @@ module.exports = (passport) => {
                         }
 
                         if (await bcrypt.compare(password, user.password)) {
-                            // console.log("found a user", user);
                             return done(null, user);
                         } else if (
                             !(await bcrypt.compare(password, user.password))
                         ) {
-                            return done(null, false, {
-                                message: "Password is incorrect",
-                            });
+                            // try will catch error users with same name, but don't do anything just let it go to the next username
+                            try {
+                                return done(null, false, {
+                                    message: "Password is incorrect",
+                                });
+                            } catch (error) {}
                         }
                     });
                 } else {
