@@ -57,4 +57,12 @@ router.get("/eduDetailCentennial", ensureAuth, (req, res) => {
     res.render("eduDetailCentennial");
 });
 
+// @desc    Movie API
+// @route   GET /api/movieAPI
+router.get("/APIsHome", ensureAuth, (req, res) => {
+    res.render("APIsHome");
+});
+// router.get("/APIsHome", (req, res) => {
+//     res.render("APIsHome");
+// });
 module.exports = router;

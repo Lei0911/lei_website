@@ -158,3 +158,13 @@
     font-size: large;
     color: black;
 }
+.API_container {
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    height: 20vh;
+    width: 40vw;
+    background-color: blueviolet;
+    transform: translate(-50%, -20%);
+    text-align: center;
+}

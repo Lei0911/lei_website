@@ -1,5 +1,7 @@
-const BCIT_icon = document.getElementById("BCIT_icon");
-const Centennial_icon = document.getElementById("Centennial_icon");
+const BCIT_icon = document.getElementById("hidden_bcit_icon_notice");
+const Centennial_icon = document.getElementById(
+    "hidden_centennial_icon_notice"
+);
 
 const bcitTranscript = document.getElementById("bcitTranscript");
 const centennialTranscript = document.getElementById("centennialTranscript");
