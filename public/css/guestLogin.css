@@ -1,9 +1,14 @@
+body {
+    background-image: url("../image/login_bk.jpg");
+    background-size: 100vw 100vh;
+    background-repeat: no-repeat;
+}
 .guest_body {
     position: relative;
     width: 50vw;
     height: 50%;
     margin: auto;
-    top: 15vh;
+    top: 30vh;
     border: 2px solid green;
     padding: 1em;
     border-radius: 10px;

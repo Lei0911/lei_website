@@ -11,10 +11,9 @@
     position: absolute;
     width: 40vw;
     height: 40vh;
-    /* border: 1px red solid; */
-    left: 50%;
-    top: 70%;
-    transform: translate(-50%, -70%);
+    left: 57%;
+    top: 90%;
+    transform: translate(-57%, -90%);
     text-align: center;
     display: grid;
     grid-template-columns: 1fr 4fr;
@@ -47,4 +46,13 @@
 }
 #weChat {
     grid-area: weChat;
+}
+.contactImage {
+    position: absolute;
+    background-image: url("../image/contact_bk.jpg");
+    background-size: 100% 100%;
+    top: 29.2vh;
+    left: -5%;
+    width: 80vw;
+    height: 20vh;
 }
