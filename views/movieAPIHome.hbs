@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/movieAPIHome.css">
-    <title>Movie API</title>
+    <title>Movie API Home</title>
 </head>
 
 <body>
@@ -18,13 +18,44 @@
             </div>
             <ul class="nav-links">
                 <li><a href="/dashboard">Dashboard</a></li>
-                <li><a href="/profile">My Profile</a></li>
-                <li><a href="/education">Education</a></li>
-                <li><a href="/project">Project</a></li>
-                <li><a href="/contact">Contact</a></li>
+                {{!-- <li><a href="/movieAPIHome">Home</a></li> --}}
+                <li><a href="/movieSearch">Search</a></li>
+                <li><a href="/movieFavorites">Favorites</a></li>
                 <li><a href="/auth/logout">Logout</a></li>
             </ul>
         </nav>
+        <div class="movieAPIBody">
+            <div id="titleDiv">
+                <img src="../image/title_img.png" alt="title_image" id="title_img">
+                {{!-- <div id="titleText"> Welcome to my movie searching App</div> --}}
+
+            </div>
+            <div id="bodyPart">
+                <div id="text_container">
+                    <p class="row">
+                    <main>
+                        <strong>Use the navigation bar on the top to go through our website's
+                            features:</strong>
+                    </main>
+                    </p>
+                    <sub>
+                        <p class="row">
+                            <strong>Home</strong> -
+                            <cite>Return to this page</cite>
+                        </p>
+                        <p class="row"><strong>Search</strong> - <cite>Search for movies from TheMovieDB based on key
+                                words,
+                                actors
+                                and directors</cite> </p>
+                        <p class="row"><strong>Favorites</strong> - <cite>Save your favorite movies to a list from the
+                                search</cite>
+                        </p>
+                        <p class="row"><strong>Logout</strong> - <cite>End your session</cite> </p>
+                    </sub>
+                </div>
+
+            </div>
+        </div>
     </div>
 
     <script src="../javascript/allPageShared.js"></script>

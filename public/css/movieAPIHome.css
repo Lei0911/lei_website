@@ -1,1 +1,30 @@
+#title_img {
+    position: relative;
+    height: 15vh;
+    width: 100vw;
+}
+#bodyPart {
+    position: relative;
+    display: grid;
+    background: url("../image/movieAPIHomePage_bk.jpg") no-repeat center;
+    background-size: cover;
+    height: 78.6vh;
+    width: 100vw;
+}
 
+#text_container {
+    /* border: 2px red solid; */
+    position: relative;
+    color: white;
+    font-size: x-large;
+    top: 8%;
+    left: 25%;
+    line-height: 8.5vh;
+    width: 50vw;
+    height: 55vh;
+    transform: translate(-25% -10%);
+}
+/* .row {
+    position: relative;
+    top: 15%;
+} */

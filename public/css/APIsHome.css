@@ -42,9 +42,7 @@
     width: 100%;
     max-height: 100%;
 }
-/* .api_name {
-    line-height: 12vh;
-} */
+
 .hidden_notice {
     opacity: 0;
 }
@@ -53,8 +51,18 @@
 .grid-item-3:hover,
 .grid-item-2:hover .hidden_notice,
 .grid-item-3:hover .hidden_notice {
-    background-color: lightgreen;
-    cursor: pointer;
-    line-height: 12vh;
+    /* background-color: lightgreen; */
+    line-height: 11vh;
     opacity: 1;
+}
+#movieAPI:hover,
+#gameAPI:hover {
+    border: 2px red solid;
+    background-color: lightgreen;
+
+    cursor: pointer;
+}
+#movieAPI,
+#gameAPI {
+    height: 23.6vh;
 }

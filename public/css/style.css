@@ -5,7 +5,7 @@
 }
 .titleTag {
     display: inline-flex;
-    width: 100vw;
+    width: 100%;
     background-color: black;
     color: white;
     height: 5vh;
@@ -96,6 +96,9 @@ li:hover {
     }
     .nav-links li:nth-child(5) {
         transition: all 0.5s ease 1s;
+    }
+    .nav-links li:nth-child(6) {
+        transition: all 0.5s ease 1.2s;
     }
     li.fade {
         opacity: 1;
