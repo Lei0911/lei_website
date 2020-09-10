@@ -1,7 +1,9 @@
 const express = require("express");
 const router = express.Router();
 const { ensureAuth, ensureGuest } = require("../middleware/auth"); // add middleware to protect route
-
+const movieAPIRoute = require("./api/APIs_Route");
+const movieSearchRoute = require("./api/APIs_Route");
+const movieFavoritesRoute = require("./api/APIs_Route");
 // @desc    Login/Landing page
 // @route   GET /
 router.get("/", ensureGuest, (req, res) => {
@@ -62,7 +64,12 @@ router.get("/eduDetailCentennial", ensureAuth, (req, res) => {
 router.get("/APIsHome", ensureAuth, (req, res) => {
     res.render("APIsHome");
 });
-// router.get("/APIsHome", (req, res) => {
-//     res.render("APIsHome");
-// });
+
+router.get("/movieAPIHome", movieAPIRoute);
+router.get("/movieSearch", movieSearchRoute);
+router.post("/movieSearch", movieSearchRoute);
+router.get("/movieFavorites", movieFavoritesRoute);
+router.post("/movieFavorites", movieFavoritesRoute);
+router.delete("/movieFavorites", movieFavoritesRoute);
+
 module.exports = router;

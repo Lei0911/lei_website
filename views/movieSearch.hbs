@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/movieSearch.css">
+    <title>Movie Search</title>
+</head>
+
+<body>
+    <nav class="titleTag">
+        <div class="barMenu">
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+        </div>
+        <ul class="nav-links">
+            <li><a href="/dashboard">Dashboard</a></li>
+            <li><a href="/movieAPIHome">Home</a></li>
+            <li><a href="/movieFavorites">Favorites</a></li>
+            <li><a href="/auth/logout">Logout</a></li>
+        </ul>
+    </nav>
+    <div class="movieAPIBody">
+        <img src="../image/title_img.png" alt="title_image" id="title_img">
+        {{!-- <div id="titleText"> Welcome to my movie searching App</div> --}}
+
+        <div id="bodyPart">
+            <div id="searchDiv">
+                <form action="/movieSearch" method="post" id="search_form">
+                    <input type="text" name="searchQuery" placeholder="Enter Actor Name or Movie Title "
+                        id="searchQueryText" value="">
+                    <button class="searchSubmit" id="searchButton" type="submit" value="Search">Search</button>
+                    <input id="searchChoice" name="searchChoice" type="text" style='display:none' value="Titles" />
+                    <input id="sortChoice" name="sortChoice" type="text" style='display:none' value="Relevance" />
+                </form>
+            </div>
+
+            <div id="displayDiv">
+                {{!-- if empty search query error show error message --}}
+                {{{searchQueryErrorMessage}}}
+                {{!-- loop throught object list send by render on search page --}}
+                {{#each searchResult}}
+                <div class="displayItemDiv">
+                    <img src='http://image.tmdb.org/t/p/w92/{{this.poster_path}}' />
+                    <br>
+                    <strong>Title</strong>: {{this.title}}<br>
+                    <strong>Overview</strong>: {{this.overview}}<br>
+                    <strong>Release Date</strong>: {{this.release_date}}<br>
+                    <form action="/movieFavorites" enctype="application/json" method="post">
+                        <input id="favImage" name="favImage" type="hidden"
+                            value="http://image.tmdb.org/t/p/w92{{this.poster_path}}" />
+                        <input id="favTitle" name="favTitle" type="hidden" value="{{this.title}}" />
+                        <input id="favOverview" name="favOverview" type="hidden" value="{{this.overview}}" />
+                        <input id="favReleaseDate" name="favReleaseDate" type="hidden" value="{{this.release_date}}" />
+                        <input id="currentFavMovieId" name="currentFavMovieId" type="hidden" value="" />
+                        <br>
+                        <button id="Favorite" action="/movieFavorites" type="submit">Add
+                            Favorite</button>
+                    </form>
+
+
+                </div>
+                {{/each}}
+            </div>
+
+        </div>
+
+
+        <script src="../javascript/allPageShared.js"></script>
+        <script src="../javascript/movieSearch.js"></script>
+</body>
+
+</html>

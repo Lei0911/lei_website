@@ -9,7 +9,7 @@ const connectDB = require("./config/db");
 const bcrypt = require("bcrypt");
 const flash = require("express-flash");
 const bodyParser = require("body-parser");
-// const methodOverride = require("method-override");
+const methodOverride = require("method-override");
 const guestRoute = require("./routes/auth_guest");
 
 // Load config
@@ -19,6 +19,9 @@ dotenv.config({ path: "./config/config.env" });
 connectDB();
 
 const app = express();
+//Override with '_method' header in the request. You can choose your own header.
+app.use(methodOverride("_method"));
+// create application/json parser
 app.use(bodyParser.json());
 
 // use morgan middleware to monitor request in console

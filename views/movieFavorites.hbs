@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/movieFavorites.css">
+    <title>Movie Search</title>
+</head>
+
+<body>
+    <div>
+        <nav class="titleTag">
+            <div class="barMenu">
+                <div class="line"></div>
+                <div class="line"></div>
+                <div class="line"></div>
+            </div>
+            <ul class="nav-links">
+                <li><a href="/dashboard">Dashboard</a></li>
+                <li><a href="/movieAPIHome">Home</a></li>
+                <li><a href="/movieSearch">Search</a></li>
+                <li><a href="/auth/logout">Logout</a></li>
+            </ul>
+        </nav>
+        <div class="movieAPIBody">
+            <div id="titleDiv">
+                <img src="../image/title_img.png" alt="title_image" id="title_img">
+            </div>
+            <div id="bodyPart">
+
+                <div id="displayDiv">
+                    {{!-- if empty search query error show error message --}}
+                    {{{getFavMovieErrorMessage}}}
+                    {{!-- loop throught object list send by render on search page --}}
+                    {{#each savedFavMovie}}
+                    <div class="displayItemDiv">
+                        <img src={{moviePicPath}} />
+                        <br>
+                        <strong>Title</strong>: {{this.movieTitle}}<br>
+                        <strong>Overview</strong>: {{this.movieDescription}}<br>
+                        <strong>Release Date</strong>: {{this.movieReleaseDate}}
+                        <br>
+                        <form action="/movieFavorites" enctype="application/json" method="post">
+                            <input id="currentFavMovieId" name="currentFavMovieId" type="hidden" value="{{this._id}}" />
+                            <br>
+                            <button id="unFavorite" action="/movieFavorites" type="submit">Delete
+                                Favorite</button>
+                        </form>
+                    </div>
+                    {{/each}}
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <script src="../javascript/allPageShared.js"></script>
+</body>
+
+</html>
