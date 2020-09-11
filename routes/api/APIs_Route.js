@@ -94,11 +94,10 @@ router.post(
         });
         try {
             console.log(req.body.currentFavMovieId);
-            if (req.body.currentFavMovieId == "") {
+            if (req.body.currentFavMovieId == "saveFavBtn") {
                 await movieAPI.save((err, savedMovieAPI) => {
                     if (err) {
                         console.log(err);
-
                         res.redirect("/movieSearch");
                         console.log("save favorite failed");
                     } else {

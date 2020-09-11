@@ -3,24 +3,20 @@ const mongoose = require("mongoose");
 const MovieAPISchema = new mongoose.Schema({
     movieTitle: {
         type: String,
-        required: true,
+        required: false,
     },
     moviePicPath: {
         type: String,
-        required: true,
+        required: false,
     },
     movieDescription: {
         type: String,
-        required: true,
+        required: false,
     },
     movieReleaseDate: {
         type: String,
-        required: true,
+        required: false,
     },
-    // favoriteMovie: {
-    //     type: Object,
-    //     required: true,
-    // },
     createdAt: {
         type: Date,
         default: Date.now,
