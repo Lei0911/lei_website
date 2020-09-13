@@ -6,7 +6,7 @@
     width: 100vw;
     height: 25vh;
     transform: translate(-50%, -50%);
-    animation: fill 0.6s ease forwards 5s;
+    animation: fill 0.6s ease forwards 6s;
     /* animation-iteration-count: infinite; */
 }
 #mainGreetingWords path:nth-child(1) {

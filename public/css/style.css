@@ -34,7 +34,75 @@ nav {
     font-size: 25px;
 }
 li:hover {
+    position: relative;
     background-color: rgb(95, 83, 83);
+}
+.anim_a_href::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+
+    /* transform: rotate(45deg); */
+    left: -100%;
+    opacity: 0;
+}
+.anim_a_href:hover::before {
+    animation: bar_wave_anim 1.5s ease-in-out;
+    left: 0%;
+    background-color: white;
+}
+@keyframes bar_wave_anim {
+    0% {
+        left: 0%;
+        width: 1%;
+        opacity: 1;
+    }
+    10% {
+        left: 25%;
+        width: 1%;
+        opacity: 1;
+    }
+    20% {
+        left: 50%;
+        width: 1%;
+        opacity: 1;
+    }
+    30% {
+        left: 75%;
+        width: 1%;
+        opacity: 1;
+    }
+    40% {
+        left: 100%;
+        width: 1%;
+        opacity: 0;
+    }
+    50% {
+        left: 100%;
+        width: 1%;
+        opacity: 1;
+    }
+    60% {
+        left: 75%;
+        width: 1%;
+        opacity: 1;
+    }
+    70% {
+        left: 50%;
+        width: 1%;
+        opacity: 1;
+    }
+    80% {
+        left: 25%;
+        width: 1%;
+        opacity: 1;
+    }
+    90% {
+        left: 0%;
+        width: 1%;
+        opacity: 0;
+    }
 }
 @media screen and (max-width: 800px) {
     .nav {
