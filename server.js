@@ -43,6 +43,7 @@ app.use(
         secret: "keyboard cat", // use whatever you want
         resave: false, // false ->we dont want to save session if nothing is modified
         saveUninitialized: false, //false-> dont create a session until something is stored
+        cookie: { maxAge: 1 * 60 * 60 * 1000 }, // max time 1 hours
     })
 );
 // Static folder
