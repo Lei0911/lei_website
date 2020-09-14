@@ -24,7 +24,8 @@
     /* background-color: lightgreen; */
     font-size: x-large;
     text-align: center;
-    line-height: 20vh;
+    line-height: 23.6vh;
+    color: white;
 }
 .grid-item-3 {
     grid-area: gameAPI;
@@ -34,7 +35,7 @@
     /* background-color: lightpink; */
     font-size: x-large;
     text-align: center;
-    line-height: 20vh;
+    line-height: 23.6vh;
 }
 
 .api_image {
@@ -44,25 +45,41 @@
 }
 
 .hidden_notice {
-    opacity: 0;
+    visibility: hidden;
 }
 
 .grid-item-2:hover,
 .grid-item-3:hover,
 .grid-item-2:hover .hidden_notice,
 .grid-item-3:hover .hidden_notice {
-    /* background-color: lightgreen; */
     line-height: 11vh;
-    opacity: 1;
+    visibility: visible;
 }
-#movieAPI:hover,
-#gameAPI:hover {
-    border: 2px red solid;
-    background-color: lightgreen;
-
+#movieAPI:hover {
+    border: 2px rgb(9, 255, 30) solid;
+    color: rgb(9, 255, 30);
+    font-weight: 700;
     cursor: pointer;
 }
 #movieAPI,
 #gameAPI {
     height: 23.6vh;
+}
+#movie_bk {
+    position: absolute;
+    width: 75%;
+    top: 50%;
+    height: 100%;
+    transform: translate(-50%, -50%);
+    object-fit: fill;
+    z-index: -1;
+}
+
+#gameAPI:hover {
+    border: 2px red solid;
+    background-color: lightgreen;
+    color: black;
+    font-weight: 700;
+    cursor: pointer;
+    color: red;
 }
