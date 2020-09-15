@@ -18,7 +18,10 @@
         </div>
         <form action="/guestLogin" method="POST" class="guest_form">
             <h3 class="label_info">Name</h3>
-            <input class="guest_form_input" type="text" id="userName" placeholder="Enter UserName" name="username"
+            {{!-- check input value and pattern--}}
+            <input class="guest_form_input" type="text" id="userName"
+                placeholder="Enter UserName (Note: Alphanumeric and/or '_')" name="username"
+                oninvalid="alert('Username only accept letters and/or numbers and/or _ !');" pattern="^[a-zA-Z0-9_]+$"
                 required>
             <h3 class="label_info">Password</h3>
             <input class="guest_form_input" type="text" class="password" placeholder="Enter Password" name="password"

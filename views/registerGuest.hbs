@@ -18,7 +18,10 @@
         </div>
         <form action="/registerGuest" method="POST" class="guest_form">
             <h3 class="label_info">Name</h3>
-            <input class="guest_form_input" type="text" class="userName" placeholder="Enter UserName" name="username"
+            {{!-- check input value and pattern--}}
+            <input class="guest_form_input" type="text" class="userName"
+                placeholder="Enter UserName (Note: Alphanumeric and/or '_')" name="username"
+                oninvalid="alert('Username only accept letters and/or numbers and/or _ !');" pattern="^[a-zA-Z0-9_]+$"
                 required>
             <h3 class="label_info">Password</h3>
             <input class="guest_form_input" type="text" class="password" placeholder="Enter Password" name="password"
@@ -37,17 +40,7 @@
         </div>
         <div class="guest_register_existing_guest_list">
             <h4>Total Number of Guests Created: {{totalNumGuests}}</h4>
-            {{!-- <h4>Guest Name: {{guestName}}</h4> --}}
-            {{!-- <ul class="guest_user_list">
-                {{#each user_list}}
-                <a href="/guestLogin">
-                    <li class="guest_user_item">
-                        Guest ID:{{this._id}} |
-                        Guest Name: {{this}}
-                    </li>
-                </a>
-                {{/each}}
-            </ul> --}}
+
         </div>
 
     </div>

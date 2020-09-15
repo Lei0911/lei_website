@@ -25,12 +25,12 @@ router.get("/logout", (req, res) => {
 
 // @desc    Guest Quick Access
 // @route   GET /auth/dashboard
-router.get(
-    "/dashboard",
-    passport.authenticate("google", { failureRedirect: "/" }),
-    (req, res) => {
-        res.redirect("/dashboard");
-    }
-);
+// router.get(
+//     "/dashboard",
+//     passport.authenticate("google", { failureRedirect: "/" }),
+//     (req, res) => {
+//         res.redirect("/dashboard");
+//     }
+// );
 
 module.exports = router;

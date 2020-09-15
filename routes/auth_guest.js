@@ -42,18 +42,22 @@ router.post("/registerGuest", ensureGuest, async (req, res) => {
         guestUserName: req.body.username,
         password: hashedPassword,
     });
-
     try {
-        await guestUser.save((err, savedGuestUser) => {
-            if (err) {
-                console.log(err);
-                res.redirect("/registerGuest");
-                // return res.status(500).send();
-            } else {
-                res.redirect("/guestLogin");
-                // return res.status(200).send();
-            }
-        });
+        if (!req.body.username.match("^[a-zA-Z0-9_]+$")) {
+            console.log("Wrong username type");
+            res.redirect("/registerGuest");
+        } else {
+            await guestUser.save((err, savedGuestUser) => {
+                if (err) {
+                    console.log(err);
+                    res.redirect("/registerGuest");
+                    // return res.status(500).send();
+                } else {
+                    res.redirect("/guestLogin");
+                    // return res.status(200).send();
+                }
+            });
+        }
     } catch {
         res.redirect("/registerGuest");
     }
