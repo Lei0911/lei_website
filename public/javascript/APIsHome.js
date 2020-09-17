@@ -5,3 +5,7 @@ const hidden_notice = document.getElementsByClassName("hidden_notice");
 movieAPI.addEventListener("click", () => {
     window.location.href = "movieAPIHome";
 });
+
+gameAPI.addEventListener("click", () => {
+    window.location.href = "gameAPIHome";
+});

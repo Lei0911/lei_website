@@ -4,6 +4,9 @@ const { ensureAuth, ensureGuest } = require("../middleware/auth"); // add middle
 const movieAPIRoute = require("./api/APIs_Route");
 const movieSearchRoute = require("./api/APIs_Route");
 const movieFavoritesRoute = require("./api/APIs_Route");
+const gameAPIRoute = require("./api/APIs_Route");
+const gameSearchRoute = require("./api/APIs_Route");
+const gameFavoritesRoute = require("./api/APIs_Route");
 // @desc    Login/Landing page
 // @route   GET /
 router.get("/", ensureGuest, (req, res) => {
@@ -71,5 +74,9 @@ router.post("/movieSearch", movieSearchRoute);
 router.get("/movieFavorites", movieFavoritesRoute);
 router.post("/movieFavorites", movieFavoritesRoute);
 router.delete("/movieFavorites", movieFavoritesRoute);
+
+router.get("/gameAPIHome", gameAPIRoute);
+router.get("/gameSearch", gameSearchRoute);
+router.get("/gameFavorites", gameFavoritesRoute);
 
 module.exports = router;

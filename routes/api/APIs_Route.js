@@ -7,11 +7,11 @@ const bodyParser = require("body-parser");
 var urlencodedParser = bodyParser.urlencoded({ extended: false });
 const { ensureAuth, ensureGuest } = require("../../middleware/auth"); // add middleware to protect route
 // @desc    movie API
-// @route   GET /Profile
+// @route   GET /movieAPIHome
 router.get("/movieAPIHome", ensureAuth, (req, res) => {
     res.render("movieAPIHome");
 });
-// const favoriteList = [];
+
 // @desc    movie API Search
 // @route   GET /movieSearch
 router.get("/movieSearch", ensureAuth, (req, res) => {
@@ -129,4 +129,23 @@ router.post(
         }
     }
 );
+
+// @desc    game API Home Page
+// @route   GET /gameAPIHome
+router.get("/gameAPIHome", ensureAuth, (req, res) => {
+    res.render("gameAPIHome");
+});
+
+// @desc    game API Search Page
+// @route   GET /gameSearch
+router.get("/gameSearch", ensureAuth, (req, res) => {
+    res.render("gameAPIHome");
+});
+
+// @desc    game API Favorites Page
+// @route   GET /gameFavorites
+router.get("/gameFavorites", ensureAuth, (req, res) => {
+    res.render("gameAPIHome");
+});
+
 module.exports = router;
