@@ -61,12 +61,35 @@
     width: 10vw;
     height: 3vh;
     border: 2px white solid;
+    cursor: pointer;
 }
-
+#goBack:hover {
+    background-color: rgb(184, 162, 162);
+    color: black;
+    font-weight: bold;
+    border: 1px white solid;
+}
 .projectContentList li:hover {
     background-color: rgb(184, 162, 162);
     -webkit-text-fill-color: blue;
 }
 .pTitle {
     font-weight: bold;
+}
+#movieAPIBtn {
+    position: fixed;
+    height: 20%;
+    width: 50%;
+    left: 50%;
+    bottom: 15%;
+    transform: translateX(-50%);
+    font-size: x-large;
+    font-weight: 400;
+}
+#movieAPIBtn:hover {
+    background-color: black;
+    color: white;
+    font-size: x-large;
+    font-weight: bold;
+    cursor: pointer;
 }

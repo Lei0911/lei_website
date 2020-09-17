@@ -1,6 +1,7 @@
 const body = document.getElementById("projectBody");
 const box = document.getElementsByClassName("box");
 const goBack = document.getElementById("goBack");
+const movieAPIBtn = document.getElementById("movieAPIBtn");
 
 var buttons = document.getElementsByClassName("btn");
 var hidden_boxs = document.getElementsByClassName("hidden_box");
@@ -48,4 +49,8 @@ for (let i = 0; i < buttons.length; i++) {
 }
 goBack.addEventListener("click", () => {
     window.location.href = "project";
+});
+
+movieAPIBtn.addEventListener("click", () => {
+    window.location.href = "APIsHome";
 });
