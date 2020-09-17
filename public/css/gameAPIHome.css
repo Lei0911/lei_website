@@ -7,20 +7,17 @@
     width: 100%;
 }
 
-#test::before {
+#bodyPart::before {
     position: absolute;
     content: "Under Construction...";
-    /* background-color: red;
-    color: white; */
     top: 7%;
     font-size: xx-large;
     font-weight: bold;
     transform: translateX(-50%);
 }
-#test::after {
+#bodyPart::after {
     position: absolute;
     content: "Coming Soon...";
-    /* background-color: green; */
     bottom: 7%;
     font-size: x-large;
     font-weight: bold;
