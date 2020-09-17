@@ -22,6 +22,38 @@
     position: relative;
     display: grid;
     grid-area: BCIT_icon;
+    /* animation: border_blinking 1s ease-in-out infinite forwards; */
+}
+
+.grid-item-2::before,
+.grid-item-4::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    /* background: linear-gradient(45deg, gold, green); */
+    height: 100%;
+    width: 100%;
+    animation: border_blinking 2s ease-in-out forwards infinite;
+}
+@keyframes border_blinking {
+    0% {
+        border: 1px black solid;
+    }
+    20% {
+        border: 1px rgb(255, 0, 0) solid;
+    }
+
+    40% {
+        border: 1px rgb(239, 243, 9) solid;
+    }
+    60% {
+        border: 1px rgb(1, 251, 13) solid;
+    }
+
+    80% {
+        border: 1px rgb(0, 255, 242) solid;
+    }
 }
 
 .school_img {
@@ -31,6 +63,7 @@
     width: 100%;
     height: 23.5vh;
     object-fit: fill;
+    z-index: -1;
 }
 .grid-item-3 {
     border: 1px black solid;
@@ -87,7 +120,19 @@
 #bcitTranscript,
 #centennialTranscript {
     position: absolute;
-    bottom: 30%;
+    bottom: 10%;
+    right: 3%;
+    color: black;
     font-size: large;
+    width: 20%;
+    height: 20%;
     font-weight: bold;
+    background-color: rgb(221, 212, 129);
+    border-radius: 5px;
+    cursor: pointer;
+}
+#bcitTranscript:hover,
+#centennialTranscript:hover {
+    color: red;
+    border: 1px red solid;
 }
