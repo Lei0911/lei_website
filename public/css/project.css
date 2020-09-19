@@ -69,9 +69,13 @@
     font-weight: bold;
     border: 1px white solid;
 }
+.projectContentList {
+    font-size: large;
+}
 .projectContentList li:hover {
     background-color: rgb(184, 162, 162);
     -webkit-text-fill-color: blue;
+    font-size: large;
 }
 .pTitle {
     font-weight: bold;
@@ -91,5 +95,33 @@
     color: white;
     font-size: x-large;
     font-weight: bold;
+    cursor: pointer;
+}
+#movieAPIBtn {
+    position: fixed;
+    height: 80px;
+    max-width: 400px;
+    left: 50%;
+    bottom: 15%;
+    transform: translateX(-50%);
+    font-size: x-large;
+    font-weight: 500;
+    color: white;
+    background-image: linear-gradient(
+        to right,
+        red,
+        orange,
+        yellow,
+        green,
+        blue,
+        indigo,
+        violet
+    );
+}
+#movieAPIBtn:hover {
+    background-color: black;
+    color: rgb(0, 255, 0);
+    font-size: x-large;
+    font-weight: 600;
     cursor: pointer;
 }
