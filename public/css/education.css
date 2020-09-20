@@ -4,7 +4,7 @@
     overflow: hidden;
     grid-row-gap: 8vh;
     grid-template-columns: 1fr 2fr;
-    /* grid-column-gap: 2px; */
+    grid-column-gap: 1px;
     grid-template-rows: repeat(3, 23.6vh);
     grid-template-areas:
         "EducationTitle EducationTitle"
@@ -23,7 +23,16 @@
     position: relative;
     display: grid;
     grid-area: BCIT_icon;
-    animation: border_blinking 2s ease-in-out infinite forwards;
+}
+
+.img_span {
+    position: absolute;
+    width: 102%;
+    height: 102.6%;
+    left: -1.15%;
+    top: -1.3%;
+    z-index: -1;
+    border-radius: 0%;
 }
 
 .grid-item-2::before,
@@ -34,28 +43,6 @@
     font-weight: bold;
     height: 100%;
     width: 100%;
-}
-@keyframes border_blinking {
-    0% {
-        border: 3px black solid;
-    }
-    20% {
-        border: 3px rgb(255, 0, 0) solid;
-    }
-
-    40% {
-        border: 3px rgb(239, 243, 9) solid;
-    }
-    60% {
-        border: 3px rgb(1, 251, 13) solid;
-    }
-
-    80% {
-        border: 3px rgb(0, 255, 242) solid;
-    }
-    100% {
-        border: 3px black solid;
-    }
 }
 
 .school_img {
@@ -68,6 +55,7 @@
     z-index: -1;
     margin: auto;
 }
+
 .grid-item-3 {
     border: 1px black solid;
     grid-area: hidden_bcit_diploma;
@@ -82,7 +70,6 @@
     position: relative;
     display: grid;
     grid-area: Centennial_icon;
-    animation: border_blinking 2s ease-in-out infinite forwards;
 }
 .grid-item-5 {
     border: 1px black solid;
@@ -130,8 +117,46 @@
     border-radius: 5px;
     cursor: pointer;
 }
+
+span {
+    position: absolute;
+    bottom: 9.3%;
+    right: 2.72%;
+    color: black;
+    width: 20.5%;
+    height: 21.4%;
+    background-image: linear-gradient(
+        to right,
+        red,
+        orange,
+        yellow,
+        green,
+        blue,
+        indigo,
+        violet
+    );
+    border-radius: 5px;
+    animation: rotate 1.5s linear infinite;
+}
+
+@keyframes rotate {
+    0% {
+        filter: hue-rotate(0deg);
+    }
+    100% {
+        filter: hue-rotate(360deg);
+    }
+}
 #bcitTranscript:hover,
 #centennialTranscript:hover {
     color: red;
     border: 1px red solid;
+    font-weight: bold;
 }
+
+/* h1 {
+    font-size: 70px;
+    background: -webkit-linear-gradient(white, black);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+} */
