@@ -10,6 +10,12 @@ var temp = [];
 for (let i = 0; i < buttons.length; i++) {
     temp.push(i);
     buttons[i].onclick = () => {
+        if (i != 2) {
+            // make the button un-clickable when not selecting movieApi project
+            movieAPIBtn.style.pointerEvents = "none";
+        } else {
+            movieAPIBtn.style.pointerEvents = "all";
+        }
         if (
             (buttons[i].style.opacity == 1, hidden_boxs[i].style.opacity == 0)
         ) {
