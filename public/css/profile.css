@@ -1,4 +1,4 @@
-.box {
+.profile_body {
     text-align: center;
 }
 
@@ -27,18 +27,66 @@
     height: 50vh;
     top: 35vh;
 }
-#profile_image_div {
-    position: relative;
+.profile_image_div {
     height: 30vh;
-    width: 100vw;
-}
-
-#myImg {
+    overflow: hidden;
     position: absolute;
-    height: 100%;
-    width: 170px;
+    width: 180px;
     left: 50%;
     transform: translateX(-50%);
+}
+
+.slide_navigation {
+    position: absolute;
+    bottom: 1px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+}
+.bar {
+    width: 25px;
+    height: 10px;
+    border: 2px solid rgb(255, 255, 255);
+    margin: 4px;
+    cursor: pointer;
+    transition: 0.4s;
+}
+.bar:hover {
+    background-color: rgb(81, 255, 0);
+}
+/* hide radio input tag */
+input[name="r"] {
+    position: absolute;
+    visibility: hidden;
+}
+.slides {
+    width: 500%;
+    height: 100%;
+    display: flex;
+}
+.slide {
+    width: 25%;
+    transition: 0.6s;
+}
+.my_img {
+    width: 100%;
+    height: 100%;
+}
+
+#r1:checked ~ .first_img {
+    margin-left: 0%;
+}
+#r2:checked ~ .first_img {
+    margin-left: -25%;
+}
+#r3:checked ~ .first_img {
+    margin-left: -50%;
+}
+#r4:checked ~ .first_img {
+    margin-left: -75%;
+}
+#r5:checked ~ .first_img {
+    margin-left: -100%;
 }
 .learnedContentParent {
     position: relative;

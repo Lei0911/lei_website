@@ -24,9 +24,37 @@
             <li><a href="/auth/logout" class="anim_a_href">Logout</a></li>
         </ul>
     </nav>
-    <div class="box generalCardStyle">
-        <div id="profile_image_div">
-            <img src="../image/me1.jpg" alt="me2" id="myImg" />
+    <div class="profile_body">
+        <div class="profile_image_div">
+            <div class="slides">
+                <input type="radio" name="r" id="r1">
+                <input type="radio" name="r" id="r2">
+                <input type="radio" name="r" id="r3">
+                <input type="radio" name="r" id="r4">
+                <input type="radio" name="r" id="r5">
+                <div class="slide first_img">
+                    <img src="../image/me1.jpg" alt="me1" id="myImg1" class="my_img" />
+                </div>
+                <div class="slide">
+                    <img src="../image/me2.jpg" alt="me2" id="myImg2" class="my_img" />
+                </div>
+                <div class="slide">
+                    <img src="../image/me3.jpg" alt="me3" id="myImg3" class="my_img" />
+                </div>
+                <div class="slide">
+                    <img src="../image/me4.jpg" alt="me4" id="myImg4" class="my_img" />
+                </div>
+                <div class="slide">
+                    <img src="../image/me5.jpg" alt="me5" id="myImg5" class="my_img" />
+                </div>
+                <div class="slide_navigation">
+                    <label for="r1" class="bar"></label>
+                    <label for="r2" class="bar"></label>
+                    <label for="r3" class="bar"></label>
+                    <label for="r4" class="bar"></label>
+                    <label for="r5" class="bar"></label>
+                </div>
+            </div>
         </div>
         <div id="profile_abstract_info">
             <h2>Lei Zhu</h2>
@@ -95,6 +123,7 @@
         </div>
     </div>
     <script src="../javascript/allPageShared.js"></script>
+    <script src="../javascript/profile.js"></script>
 </body>
 
 </html>
