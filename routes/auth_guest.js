@@ -2,6 +2,7 @@ const express = require("express");
 const passport = require("passport");
 const router = express.Router();
 const bcrypt = require("bcrypt");
+var confirmationError = "";
 
 require("../config/passport_guest")(passport);
 const GuestUser = require("../models/GuestUser");
@@ -33,6 +34,7 @@ router.get("/registerGuest", ensureGuest, async (req, res) => {
     res.render("registerGuest", {
         errorMessage: req.flash("error"),
         totalNumGuests: totalGuest,
+        errorMessage_confirmation: confirmationError,
     });
 });
 
@@ -45,6 +47,10 @@ router.post("/registerGuest", ensureGuest, async (req, res) => {
     try {
         if (!req.body.username.match("^[a-zA-Z0-9_]+$")) {
             console.log("Wrong username type");
+            res.redirect("/registerGuest");
+        }
+        if (req.body.password != req.body.confirm_password) {
+            confirmationError = "Passwords typed don't match";
             res.redirect("/registerGuest");
         } else {
             await guestUser.save((err, savedGuestUser) => {

@@ -5,7 +5,8 @@ body {
 }
 .guest_body {
     position: relative;
-    width: 50%;
+    /* width: 50%; */
+    max-width: 450px;
     height: 50%;
     margin-left: auto;
     margin-right: auto;
@@ -67,7 +68,7 @@ button:hover {
     position: absolute;
     padding-top: 2em;
     left: 0;
-    top: 40vh;
+    top: 50vh;
     width: 100%;
     overflow: auto;
     text-align: center;

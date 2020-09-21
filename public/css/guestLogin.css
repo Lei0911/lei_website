@@ -5,7 +5,7 @@ body {
 }
 .guest_body {
     position: relative;
-    width: 50vw;
+    max-width: 450px;
     height: 50%;
     margin: auto;
     top: 30vh;
@@ -48,7 +48,7 @@ li:hover {
     position: absolute;
     padding-top: 2em;
     left: 0;
-    top: 40vh;
+    top: 50vh;
     width: 100%;
     overflow: auto;
     text-align: center;

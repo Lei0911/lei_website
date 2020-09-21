@@ -9,7 +9,8 @@ body {
     margin-left: auto;
     margin-right: auto;
     border: 2px solid green;
-    width: 50vw;
+    /* width: 50vw; */
+    max-width: 480px;
     height: 35.2vh;
     margin-top: 30vh;
     border-radius: 10px;
@@ -23,12 +24,16 @@ body {
 }
 .login_with_google,
 .sign_in_with_guest {
+    border-radius: 10px;
     color: black;
     background-color: white;
-    width: 15vw;
-    height: 4vh;
+    width: 200px;
+    height: 30px;
     cursor: pointer;
     font-weight: bold;
+    margin: 1em;
+
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
 }
 
 button:hover {

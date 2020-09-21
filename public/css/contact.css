@@ -12,15 +12,15 @@
     width: 40vw;
     height: 40vh;
     left: 57%;
-    top: 90%;
+    top: 85%;
     transform: translate(-57%, -90%);
     text-align: center;
     display: grid;
     grid-template-columns: 1fr 4fr;
-    grid-template-rows: repeat(3, 10vh);
+    grid-template-rows: repeat(4, 8vh);
     grid-row-gap: 2em;
-    grid-template-areas: "emailIcon email" "linkedInIcon linkedIn" "weChatIcon weChat";
-    line-height: 10vh;
+    grid-template-areas: "emailIcon email" "linkedInIcon linkedIn" "weChatIcon weChat" "faceBookIcon faceBook";
+    line-height: 8vh;
 }
 #email {
     grid-area: email;
@@ -28,13 +28,7 @@
 #emailIcon {
     grid-area: emailIcon;
 }
-.grid-item {
-    border: 2px black solid;
-    height: 100%;
-    width: 100%;
-    font-size: larger;
-    font-weight: bolder;
-}
+
 #linkedInIcon {
     grid-area: linkedInIcon;
 }
@@ -47,6 +41,19 @@
 #weChat {
     grid-area: weChat;
 }
+#faceBookIcon {
+    grid-area: faceBookIcon;
+}
+#faceBook {
+    grid-area: faceBook;
+}
+.grid-item {
+    border: 2px black solid;
+    height: 100%;
+    width: 100%;
+    font-size: larger;
+    font-weight: bolder;
+}
 .contactImage {
     position: absolute;
     background-image: url("../image/contact_bk.jpg");
@@ -54,5 +61,5 @@
     top: 29.2vh;
     left: -5%;
     width: 80vw;
-    height: 20vh;
+    height: 15vh;
 }

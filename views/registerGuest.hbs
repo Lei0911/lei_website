@@ -12,12 +12,13 @@
     <div class="guest_body">
         <div id="errorMessage">
             <h3>{{errorMessage}}</h3>
+            <h3>{{errorMessage_confirmation}}</h3>
         </div>
         <div class="instruction_info">
-            <h1>Please Create Guest User </h1>
+            <h1>Create New User </h1>
         </div>
         <form action="/registerGuest" method="POST" class="guest_form">
-            <h3 class="label_info">Name</h3>
+            <h3 class="label_info">User Name</h3>
             {{!-- check input value and pattern--}}
             <input class="guest_form_input" type="text" class="userName"
                 placeholder="Enter UserName (Note: Alphanumeric and/or '_')" name="username"
@@ -26,6 +27,9 @@
             <h3 class="label_info">Password</h3>
             <input class="guest_form_input" type="text" class="password" placeholder="Enter Password" name="password"
                 required>
+            <h3 class="label_info">Confirm Password</h3>
+            <input class="guest_form_input" type="text" class="password" placeholder="Confirm Password"
+                name="confirm_password" required>
             <br>
             <br>
             <button class="guest_form_submit_btn" class="submit" type="submit">Create Guest</button>
@@ -38,6 +42,7 @@
                 <h3>Go To SignIn Page</h3>
             </a>
         </div>
+
         <div class="guest_register_existing_guest_list">
             <h4>Total Number of Guests Created: {{totalNumGuests}}</h4>
 
