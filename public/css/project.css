@@ -74,7 +74,7 @@
     font-size: large;
 }
 .projectContentList li:hover {
-    background-color: rgb(184, 162, 162);
+    background-color: rgb(214, 210, 210);
     -webkit-text-fill-color: blue;
     font-size: large;
 }

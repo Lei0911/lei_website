@@ -9,8 +9,7 @@ body {
     margin-left: auto;
     margin-right: auto;
     border: 2px solid green;
-    /* width: 50vw; */
-    max-width: 480px;
+    max-width: 450px;
     height: 35.2vh;
     margin-top: 30vh;
     border-radius: 10px;
@@ -32,7 +31,6 @@ body {
     cursor: pointer;
     font-weight: bold;
     margin: 1em;
-
     box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
 }
 

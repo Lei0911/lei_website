@@ -81,7 +81,7 @@ li:hover {
     50% {
         left: 100%;
         width: 1%;
-        opacity: 1;
+        opacity: 0;
     }
     60% {
         left: 75%;
