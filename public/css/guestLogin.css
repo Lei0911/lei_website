@@ -1,5 +1,5 @@
 body {
-    background-image: url("../image/login_bk.jpg");
+    background-image: url("../image/login_bk.jpeg");
     background-size: 100vw 100vh;
     background-repeat: no-repeat;
 }
@@ -8,8 +8,9 @@ body {
     max-width: 450px;
     height: 50%;
     margin: auto;
-    top: 30vh;
+    top: 20vh;
     border: 2px solid green;
+    background-color: aliceblue;
     padding: 1em;
     border-radius: 10px;
     box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
@@ -48,7 +49,10 @@ li:hover {
     position: absolute;
     padding-top: 2em;
     left: 0;
-    top: 50vh;
+    top: 45vh;
+    color: white;
+    font-weight: bolder;
+    font-size: large;
     width: 100%;
     overflow: auto;
     text-align: center;
@@ -74,4 +78,32 @@ button:hover {
     text-align: center;
     border-top-right-radius: 7px;
     border-top-left-radius: 7px;
+}
+
+.nav_btn {
+    position: relative;
+    border-radius: 10px;
+    height: 30px;
+    color: black;
+    /* border: 2px solid green; */
+    background-color: aliceblue;
+    cursor: pointer;
+    font-weight: bold;
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+}
+.signUp {
+    position: absolute;
+    width: 220px;
+    bottom: -45px;
+    right: 0;
+}
+.back_to_entrance {
+    position: absolute;
+    width: 220px;
+    bottom: -45px;
+    left: 0;
+}
+.nav_btn:hover {
+    background-color: red;
+    color: white;
 }

@@ -35,24 +35,18 @@
             <button class="guest_form_submit_btn" class="submit" type="submit">Create Guest</button>
         </form>
         <div id="registerGuestNav">
-            <a href="/">
-                <h3>Back To Entrance Page</h3>
-            </a>
-            <a href="/guestLogin">
-                <h3>Go To SignIn Page</h3>
-            </a>
+            <button class="nav_btn back_to_entrance" id="back_to_entrance">
+                <h3>Back to Entrance Page</h3>
+            </button>
+            <button class="nav_btn signIn" id="signIn">
+                <h3>Already a member? Sign In</h3>
+            </button>
         </div>
-
         <div class="guest_register_existing_guest_list">
             <h4>Total Number of Guests Created: {{totalNumGuests}}</h4>
-
         </div>
-
     </div>
-
-
-
-
+    <script src="../javascript/guestRegister.js"></script>
 </body>
 
 </html>
