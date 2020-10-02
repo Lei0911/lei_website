@@ -44,3 +44,10 @@ button:hover {
     cursor: pointer;
     font-weight: bold;
 }
+#show_date {
+    height: 10px;
+    width: 100%;
+    text-align: center;
+    font-size: x-large;
+    color: black;
+}
